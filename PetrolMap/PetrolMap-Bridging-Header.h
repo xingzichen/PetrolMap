@@ -3,3 +3,4 @@
 //
 
 #import "BMapKit.h"
+#import "MapManagerDelegate.h"

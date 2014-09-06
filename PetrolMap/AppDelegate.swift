@@ -5,28 +5,33 @@
 //  Created by Liang on 9/6/14.
 //  Copyright (c) 2014 Xing Michael. All rights reserved.
 //  
-//  Key : yVXnbtNPPMaoMU7UQFBkRQCS
+//  Key : vZTqCaSktGPCsdDzOocMW0r2
 
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , BMKGeneralDelegate{
                             
-    var window: UIWindow?
-    var mapManager: BMKMapManager?;
-
+    var window: UIWindow?;
+//    var mapManager: MapManager?;
+    
+    var _mapManager: BMKMapManager?;
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        mapManager = BMKMapManager();
-        
-        var ret = mapManager?.start("yVXnbtNPPMaoMU7UQFBkRQCS", generalDelegate: nil)
-        if(ret? == false){
+//        var mapManager = MapManagerDelegate();
+        _mapManager = BMKMapManager();
+        println(_mapManager);
+        var ret = _mapManager?.start("vZTqCaSktGPCsdDzOocMW0r2", generalDelegate: self)
+        if(ret == false){
             println("BMKMapManager init failed!");
         }else{
             println("BMKMapManager init success!");
         }
+        
+        var idtf = NSBundle.mainBundle().bundleIdentifier;
+        println(idtf);
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds);
         
@@ -60,6 +65,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func onGetNetworkState(iError: Int32) {
+        if (0 == iError) {
+            println("联网成功");
+        }
+        else{
+            println("onGetNetworkState %d",iError);
+        }
+    }
+    
+    
+    func onGetPermissionState(iError: Int32) {
+        if (0 == iError) {
+            println("授权成功");
+        }
+        else {
+            println("onGetPermissionState %d",iError);
+        }
     }
 
 

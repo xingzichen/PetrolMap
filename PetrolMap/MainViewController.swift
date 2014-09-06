@@ -9,11 +9,16 @@
 import UIKit
 
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, BMKMapViewDelegate {
+    
+    var mapView: BMKMapView?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        mapView = BMKMapView(frame: CGRect(x: 0, y: 0, width: 320, height: 480));
+        self.view = mapView!;
         
     }
     

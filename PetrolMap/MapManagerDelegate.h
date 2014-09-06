@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BMapKit.h"
 
-@interface BridgingFile : NSObject
+@interface MapManagerDelegate : NSObject<BMKGeneralDelegate>
+
+@property (nonatomic,strong) NSString* error;
 
 @end
