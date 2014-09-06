@@ -12,7 +12,16 @@
 		EC174FF619BA1ED00011469C /* PetrolMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC174FF519BA1ED00011469C /* PetrolMapTests.swift */; };
 		EC17500019BA210C0011469C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC174FFF19BA210C0011469C /* MainViewController.xib */; };
 		EC17500219BA21340011469C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17500119BA21340011469C /* MainViewController.swift */; };
-		EC17504419BA94400011469C /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC17504319BA94400011469C /* libbaidumapapi.a */; };
+		EC4B28A319BABB38003A995F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28A219BABB38003A995F /* CoreLocation.framework */; };
+		EC4B28A519BABB56003A995F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28A419BABB56003A995F /* QuartzCore.framework */; };
+		EC4B28A719BABB60003A995F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28A619BABB60003A995F /* OpenGLES.framework */; };
+		EC4B28A919BABB69003A995F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28A819BABB69003A995F /* SystemConfiguration.framework */; };
+		EC4B28AB19BABB74003A995F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28AA19BABB74003A995F /* CoreGraphics.framework */; };
+		EC4B28AD19BABB7C003A995F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28AC19BABB7C003A995F /* Security.framework */; };
+		EC4B28B019BABC01003A995F /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC4B28AF19BABC01003A995F /* mapapi.bundle */; };
+		EC4B28B819BACC5C003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B719BACC5C003A995F /* libbaidumapapi.a */; };
+		EC4B28BA19BACC6D003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B919BACC6D003A995F /* libbaidumapapi.a */; };
+		EC4B28BD19BACDD8003A995F /* BridgingFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC4B28BC19BACDD8003A995F /* BridgingFile.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +105,18 @@
 		EC17504019BA94400011469C /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
 		EC17504119BA94400011469C /* BMKUtilsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUtilsComponent.h; sourceTree = "<group>"; };
 		EC17504219BA94400011469C /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
-		EC17504319BA94400011469C /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = PetrolMap/Libs/BaiduMap/libbaidumapapi.a; sourceTree = "<group>"; };
 		EC17504619BA9ECC0011469C /* PetrolMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PetrolMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC4B28A219BABB38003A995F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EC4B28A419BABB56003A995F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EC4B28A619BABB60003A995F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EC4B28A819BABB69003A995F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC4B28AA19BABB74003A995F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC4B28AC19BABB7C003A995F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EC4B28AF19BABC01003A995F /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = PetrolMap/Libs/BaiduMap/mapapi.bundle; sourceTree = "<group>"; };
+		EC4B28B719BACC5C003A995F /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = "PetrolMap/Libs/BaiduMap/Release-iphoneos/libbaidumapapi.a"; sourceTree = "<group>"; };
+		EC4B28B919BACC6D003A995F /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = "PetrolMap/Libs/BaiduMap/Release-iphonesimulator/libbaidumapapi.a"; sourceTree = "<group>"; };
+		EC4B28BB19BACDD8003A995F /* BridgingFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingFile.h; sourceTree = "<group>"; };
+		EC4B28BC19BACDD8003A995F /* BridgingFile.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BridgingFile.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +124,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC17504419BA94400011469C /* libbaidumapapi.a in Frameworks */,
+				EC4B28AD19BABB7C003A995F /* Security.framework in Frameworks */,
+				EC4B28AB19BABB74003A995F /* CoreGraphics.framework in Frameworks */,
+				EC4B28A919BABB69003A995F /* SystemConfiguration.framework in Frameworks */,
+				EC4B28BA19BACC6D003A995F /* libbaidumapapi.a in Frameworks */,
+				EC4B28A719BABB60003A995F /* OpenGLES.framework in Frameworks */,
+				EC4B28B819BACC5C003A995F /* libbaidumapapi.a in Frameworks */,
+				EC4B28A519BABB56003A995F /* QuartzCore.framework in Frameworks */,
+				EC4B28A319BABB38003A995F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +151,7 @@
 				EC174FDF19BA1ED00011469C /* PetrolMap */,
 				EC174FF219BA1ED00011469C /* PetrolMapTests */,
 				EC174FDE19BA1ED00011469C /* Products */,
+				EC4B28AE19BABB7F003A995F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +174,8 @@
 				EC174FE919BA1ED00011469C /* Images.xcassets */,
 				EC174FE019BA1ED00011469C /* Supporting Files */,
 				EC17504619BA9ECC0011469C /* PetrolMap-Bridging-Header.h */,
+				EC4B28BB19BACDD8003A995F /* BridgingFile.h */,
+				EC4B28BC19BACDD8003A995F /* BridgingFile.mm */,
 			);
 			path = PetrolMap;
 			sourceTree = "<group>";
@@ -188,8 +217,10 @@
 		EC17500419BA94270011469C /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				EC4B28B919BACC6D003A995F /* libbaidumapapi.a */,
+				EC4B28B719BACC5C003A995F /* libbaidumapapi.a */,
+				EC4B28AF19BABC01003A995F /* mapapi.bundle */,
 				EC17500519BA94400011469C /* inc */,
-				EC17504319BA94400011469C /* libbaidumapapi.a */,
 			);
 			name = BaiduMap;
 			sourceTree = "<group>";
@@ -261,6 +292,19 @@
 			);
 			name = inc;
 			path = PetrolMap/Libs/BaiduMap/inc;
+			sourceTree = "<group>";
+		};
+		EC4B28AE19BABB7F003A995F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC4B28AC19BABB7C003A995F /* Security.framework */,
+				EC4B28AA19BABB74003A995F /* CoreGraphics.framework */,
+				EC4B28A819BABB69003A995F /* SystemConfiguration.framework */,
+				EC4B28A619BABB60003A995F /* OpenGLES.framework */,
+				EC4B28A419BABB56003A995F /* QuartzCore.framework */,
+				EC4B28A219BABB38003A995F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4B28B019BABC01003A995F /* mapapi.bundle in Resources */,
 				EC174FEA19BA1ED00011469C /* Images.xcassets in Resources */,
 				EC17500019BA210C0011469C /* MainViewController.xib in Resources */,
 			);
@@ -362,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4B28BD19BACDD8003A995F /* BridgingFile.mm in Sources */,
 				EC174FE319BA1ED00011469C /* AppDelegate.swift in Sources */,
 				EC17500219BA21340011469C /* MainViewController.swift in Sources */,
 			);
@@ -471,10 +517,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PetrolMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PetrolMap/Libs/BaiduMap",
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/PetrolMap/Libs/BaiduMap/Release$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetrolMap/PetrolMap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -489,10 +533,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PetrolMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PetrolMap/Libs/BaiduMap",
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/PetrolMap/Libs/BaiduMap/Release$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetrolMap/PetrolMap-Bridging-Header.h";
 			};

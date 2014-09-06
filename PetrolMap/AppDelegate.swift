@@ -4,7 +4,8 @@
 //
 //  Created by Liang on 9/6/14.
 //  Copyright (c) 2014 Xing Michael. All rights reserved.
-//
+//  
+//  Key : yVXnbtNPPMaoMU7UQFBkRQCS
 
 import UIKit
 
@@ -12,10 +13,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    var mapManager: BMKMapManager?;
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        mapManager = BMKMapManager();
+        
+        var ret = mapManager?.start("yVXnbtNPPMaoMU7UQFBkRQCS", generalDelegate: nil)
+        if(ret? == false){
+            println("BMKMapManager init failed!");
+        }else{
+            println("BMKMapManager init success!");
+        }
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds);
         
         var mainController = MainViewController(nibName: String("MainViewController"), bundle: nil);
@@ -24,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = naviController;
         window?.backgroundColor = UIColor.whiteColor();
         window?.makeKeyAndVisible();
+        
         return true
     }
 
