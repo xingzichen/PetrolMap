@@ -551,6 +551,7 @@
 				EC174FFB19BA1ED00011469C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC174FFC19BA1ED00011469C /* Build configuration list for PBXNativeTarget "PetrolMapTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +560,7 @@
 				EC174FFE19BA1ED00011469C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
