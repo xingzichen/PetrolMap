@@ -22,7 +22,10 @@ BMKMapManager* _mapManager;
         _error = @"succeed";
         NSLog(@"manager start succeed!");
     }
-    NSLog([[NSBundle mainBundle] bundleIdentifier]);
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString* app_name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    NSLog(@"app name : %@", app_name);
+    NSLog(@"app bundle id : %@", [[NSBundle mainBundle] bundleIdentifier]);
     return self;
 }
 

@@ -13,22 +13,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate , BMKGeneralDelegate{
                             
     var window: UIWindow?;
-//    var mapManager: MapManager?;
+    var mapManager: MapManagerDelegate?;
     
-    var _mapManager: BMKMapManager?;
+//    var _mapManager: BMKMapManager?;
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        var mapManager = MapManagerDelegate();
-        _mapManager = BMKMapManager();
-        println(_mapManager);
-        var ret = _mapManager?.start("vZTqCaSktGPCsdDzOocMW0r2", generalDelegate: self)
-        if(ret == false){
-            println("BMKMapManager init failed!");
-        }else{
-            println("BMKMapManager init success!");
-        }
+        var mapManager = MapManagerDelegate();
+//        _mapManager = BMKMapManager();
+//        println(_mapManager);
+//        var ret = _mapManager?.start("vZTqCaSktGPCsdDzOocMW0r2", generalDelegate: self)
+//        if(ret == false){
+//            println("BMKMapManager init failed!");
+//        }else{
+//            println("BMKMapManager init success!");
+//        }
         
         var idtf = NSBundle.mainBundle().bundleIdentifier;
         println(idtf);

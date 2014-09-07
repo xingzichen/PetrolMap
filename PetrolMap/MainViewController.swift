@@ -9,17 +9,39 @@
 import UIKit
 
 
-class MainViewController: UIViewController, BMKMapViewDelegate {
+class MainViewController: UIViewController, BMKMapViewDelegate,BMKLocationServiceDelegate {
     
-    var mapView: BMKMapView?;
+    var _mapView: BMKMapView?;
+    var _locationService: BMKLocationService?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        mapView = BMKMapView(frame: CGRect(x: 0, y: 0, width: 320, height: 480));
-        self.view = mapView!;
+        _mapView = BMKMapView(frame: CGRect(x: 0, y: 0, width: 320, height: 460));
+        self.view = _mapView!;
         
+        _locationService = BMKLocationService();
+        
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        _mapView?.delegate = self;
+        _locationService?.delegate = self;
+        
+        _locationService?.startUserLocationService();
+        
+        _mapView?.showsUserLocation = true;
+        _mapView?.userTrackingMode = BMKUserTrackingModeFollow;
+        _mapView?.showsUserLocation = true;
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated);
+        _mapView?.delegate = nil;
+        _locationService?.delegate = nil;
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,5 +49,12 @@ class MainViewController: UIViewController, BMKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func didUpdateUserHeading(userLocation: BMKUserLocation!) {
+        _mapView?.updateLocationData(userLocation);
+    }
+    
+    func didUpdateUserLocation(userLocation: BMKUserLocation!) {
+        _mapView?.updateLocationData(userLocation);
+    }
     
 }
