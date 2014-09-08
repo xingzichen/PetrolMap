@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , BMKGeneralDelegate{
 //        }else{
 //            println("BMKMapManager init success!");
 //        }
+        var dataMgr = XZDataManager.sharedInstance();
+        dataMgr.loadData();
         
         var idtf = NSBundle.mainBundle().bundleIdentifier;
         println(idtf);

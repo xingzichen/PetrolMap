@@ -22,7 +22,9 @@
 		EC4B28B819BACC5C003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B719BACC5C003A995F /* libbaidumapapi.a */; };
 		EC4B28BA19BACC6D003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B919BACC6D003A995F /* libbaidumapapi.a */; };
 		EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */; };
-		ECF907F619BC53E5003BA9E2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF907F519BC53E5003BA9E2 /* DataManager.swift */; };
+		EC8C848419BCD0F400578346 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848319BCD0F400578346 /* stations.json */; };
+		EC8C848619BD8F7400578346 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848519BD8F7400578346 /* locations.json */; };
+		ECF907F619BC53E5003BA9E2 /* XZDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF907F519BC53E5003BA9E2 /* XZDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,9 +120,9 @@
 		EC4B28B919BACC6D003A995F /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = "PetrolMap/Libs/BaiduMap/Release-iphonesimulator/libbaidumapapi.a"; sourceTree = "<group>"; };
 		EC4B28BB19BACDD8003A995F /* MapManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManagerDelegate.h; sourceTree = "<group>"; };
 		EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapManagerDelegate.mm; sourceTree = "<group>"; };
-		ECF907F219BC1AAA003BA9E2 /* station_data.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; name = station_data.geojson; path = Data/station_data.geojson; sourceTree = "<group>"; };
-		ECF907F319BC4429003BA9E2 /* location_data.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = location_data.geojson; sourceTree = "<group>"; };
-		ECF907F519BC53E5003BA9E2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		EC8C848319BCD0F400578346 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		EC8C848519BD8F7400578346 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		ECF907F519BC53E5003BA9E2 /* XZDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +183,7 @@
 				EC17504619BA9ECC0011469C /* PetrolMap-Bridging-Header.h */,
 				EC4B28BB19BACDD8003A995F /* MapManagerDelegate.h */,
 				EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */,
-				ECF907F519BC53E5003BA9E2 /* DataManager.swift */,
+				ECF907F519BC53E5003BA9E2 /* XZDataManager.swift */,
 			);
 			path = PetrolMap;
 			sourceTree = "<group>";
@@ -316,8 +318,8 @@
 		ECF907F119BC1A87003BA9E2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				ECF907F219BC1AAA003BA9E2 /* station_data.geojson */,
-				ECF907F319BC4429003BA9E2 /* location_data.geojson */,
+				EC8C848319BCD0F400578346 /* stations.json */,
+				EC8C848519BD8F7400578346 /* locations.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -404,6 +406,8 @@
 			files = (
 				EC4B28B019BABC01003A995F /* mapapi.bundle in Resources */,
 				EC174FEA19BA1ED00011469C /* Images.xcassets in Resources */,
+				EC8C848619BD8F7400578346 /* locations.json in Resources */,
+				EC8C848419BCD0F400578346 /* stations.json in Resources */,
 				EC17500019BA210C0011469C /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */,
-				ECF907F619BC53E5003BA9E2 /* DataManager.swift in Sources */,
+				ECF907F619BC53E5003BA9E2 /* XZDataManager.swift in Sources */,
 				EC174FE319BA1ED00011469C /* AppDelegate.swift in Sources */,
 				EC17500219BA21340011469C /* MainViewController.swift in Sources */,
 			);
