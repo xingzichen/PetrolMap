@@ -13,6 +13,7 @@ class MainViewController: UIViewController, BMKMapViewDelegate,BMKLocationServic
     
     var _mapView: BMKMapView?;
     var _locationService: BMKLocationService?;
+    var _dataManager: XZDataManager?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class MainViewController: UIViewController, BMKMapViewDelegate,BMKLocationServic
         
         _locationService = BMKLocationService();
         
+        _dataManager = XZDataManager.sharedInstance();
         
     }
     
@@ -36,6 +38,12 @@ class MainViewController: UIViewController, BMKMapViewDelegate,BMKLocationServic
         _mapView?.showsUserLocation = true;
         _mapView?.userTrackingMode = BMKUserTrackingModeFollow;
         _mapView?.showsUserLocation = true;
+        
+        var pointAnnotation = CustomPointAnnotation();
+        
+//        pointAnnotation.pointCalloutInfo = _dataManager?.stationData?;
+//        println(_dataManager?.stationData?.valueForKey("coordinates"));
+        //println(pointAnnotation.pointCalloutInfo);
     }
     
     override func viewWillDisappear(animated: Bool) {

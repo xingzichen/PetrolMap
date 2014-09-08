@@ -23,7 +23,10 @@
 		EC4B28BA19BACC6D003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B919BACC6D003A995F /* libbaidumapapi.a */; };
 		EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */; };
 		EC8C848419BCD0F400578346 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848319BCD0F400578346 /* stations.json */; };
-		EC8C848619BD8F7400578346 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848519BD8F7400578346 /* locations.json */; };
+		EC8C848619BD8F7400578346 /* suggestion.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848519BD8F7400578346 /* suggestion.json */; };
+		EC8C848919BDD60000578346 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */; };
+		EC8C848E19BDE87B00578346 /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C848D19BDE87B00578346 /* StationData.swift */; };
+		EC8C849019BE10B000578346 /* SuggestedStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C848F19BE10B000578346 /* SuggestedStation.swift */; };
 		ECF907F619BC53E5003BA9E2 /* XZDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF907F519BC53E5003BA9E2 /* XZDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +124,10 @@
 		EC4B28BB19BACDD8003A995F /* MapManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManagerDelegate.h; sourceTree = "<group>"; };
 		EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapManagerDelegate.mm; sourceTree = "<group>"; };
 		EC8C848319BCD0F400578346 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
-		EC8C848519BD8F7400578346 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		EC8C848519BD8F7400578346 /* suggestion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestion.json; sourceTree = "<group>"; };
+		EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPointAnnotation.swift; path = CustomCalloutView/CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		EC8C848D19BDE87B00578346 /* StationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationData.swift; path = Models/StationData.swift; sourceTree = "<group>"; };
+		EC8C848F19BE10B000578346 /* SuggestedStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestedStation.swift; path = Models/SuggestedStation.swift; sourceTree = "<group>"; };
 		ECF907F519BC53E5003BA9E2 /* XZDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +179,8 @@
 		EC174FDF19BA1ED00011469C /* PetrolMap */ = {
 			isa = PBXGroup;
 			children = (
+				EC8C848A19BDE37D00578346 /* Models */,
+				EC8C848719BDCD5C00578346 /* CustomCalloutView */,
 				ECF907F119BC1A87003BA9E2 /* Data */,
 				EC17500319BA93FA0011469C /* Libs */,
 				EC174FE219BA1ED00011469C /* AppDelegate.swift */,
@@ -315,11 +323,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC8C848719BDCD5C00578346 /* CustomCalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */,
+			);
+			name = CustomCalloutView;
+			sourceTree = "<group>";
+		};
+		EC8C848A19BDE37D00578346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC8C848D19BDE87B00578346 /* StationData.swift */,
+				EC8C848F19BE10B000578346 /* SuggestedStation.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		ECF907F119BC1A87003BA9E2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				EC8C848319BCD0F400578346 /* stations.json */,
-				EC8C848519BD8F7400578346 /* locations.json */,
+				EC8C848519BD8F7400578346 /* suggestion.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -406,7 +431,7 @@
 			files = (
 				EC4B28B019BABC01003A995F /* mapapi.bundle in Resources */,
 				EC174FEA19BA1ED00011469C /* Images.xcassets in Resources */,
-				EC8C848619BD8F7400578346 /* locations.json in Resources */,
+				EC8C848619BD8F7400578346 /* suggestion.json in Resources */,
 				EC8C848419BCD0F400578346 /* stations.json in Resources */,
 				EC17500019BA210C0011469C /* MainViewController.xib in Resources */,
 			);
@@ -427,8 +452,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */,
+				EC8C848919BDD60000578346 /* CustomPointAnnotation.swift in Sources */,
 				ECF907F619BC53E5003BA9E2 /* XZDataManager.swift in Sources */,
 				EC174FE319BA1ED00011469C /* AppDelegate.swift in Sources */,
+				EC8C848E19BDE87B00578346 /* StationData.swift in Sources */,
+				EC8C849019BE10B000578346 /* SuggestedStation.swift in Sources */,
 				EC17500219BA21340011469C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
