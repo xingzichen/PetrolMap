@@ -1,6 +1,5 @@
 {
-    "type": "StationList",
-    "coordinates": [
+    "stations": [
                     {"oil_wear":"0","is_creditcard":"0","promotion":"","score":"3.25","st_name":"中石化深南燃气加油站","st_id":"10265","type":"中石化","thumbnail":"shop_thumbnail.jpg","price":"7.8","distanct":761.40716347725,"address":"南山区南山大道3093","is_membercard":"0","busystatus":1,"longitude":"113.92941","latitude":"22.552818","wecarid":"14","is_promo":"0"},
                     {"oil_wear":"0","is_creditcard":"0","promotion":"","score":"4.66667","st_name":"中石化深长红珠岭加油站","st_id":"10263","type":"中石化","thumbnail":"shop_thumbnail.jpg","price":"7.8","distanct":905.54219440797,"address":"南山区深南大道11007号，深南南海立交往东第一家油站","is_membercard":"0","busystatus":1,"longitude":"113.941178","latitude":"22.544524","wecarid":"10","is_promo":"0"},
                     {"oil_wear":"0","is_creditcard":"0","promotion":"","score":"4","st_name":"中石化特发加油站","st_id":"10264","type":"中石化","thumbnail":"shop_thumbnail.jpg","price":"7.8","distanct":1038.9663487115,"address":"南山区深南大道深圳大学北门(近桂庙新村)","is_membercard":"0","busystatus":1,"longitude":"113.942531","latitude":"22.544574","wecarid":"11","is_promo":"0"},

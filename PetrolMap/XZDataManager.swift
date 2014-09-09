@@ -42,7 +42,7 @@ class XZDataManager{
         var dataStation:NSData! = contentStation.dataUsingEncoding(NSUTF8StringEncoding);
         stationData = NSJSONSerialization.JSONObjectWithData(dataStation , options: NSJSONReadingOptions.MutableContainers, error:nil) as? NSDictionary;
 //        println(stationData?.valueForKey("coordinates"));
-        parseStations(stationData?.valueForKey("coordinates") as NSArray);
+        parseStations(stationData?.valueForKey("stations") as NSArray);
         
         // Load Location Data
         var filePathLocation = NSBundle.mainBundle().pathForResource("suggestion", ofType: "json");
