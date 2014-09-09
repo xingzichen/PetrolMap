@@ -10,7 +10,7 @@ import Foundation
 
 class XZDataManager{
     
-    var stations: Array<StationData>?;
+    var stations: [StationData]?;
     var suggestions: SuggestedStation?;
     
     let dirs : [String]? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String];
