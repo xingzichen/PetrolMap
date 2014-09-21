@@ -120,6 +120,9 @@ class XZDataManager{
         suggestions?.recommend?.thumbnail = recommendDict.valueForKey("thumbnail") as String;
         suggestions?.recommend?.type = recommendDict.valueForKey("type") as String;
         
+        var test:CLLocationDegrees = NSString(string: suggestions!.cheapest!.latitude).doubleValue;
+        println(test);
+        
     }
     
 }

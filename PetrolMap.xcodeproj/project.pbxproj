@@ -22,6 +22,7 @@
 		EC4B28B819BACC5C003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B719BACC5C003A995F /* libbaidumapapi.a */; };
 		EC4B28BA19BACC6D003A995F /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4B28B919BACC6D003A995F /* libbaidumapapi.a */; };
 		EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */; };
+		EC6E087219BFED20007AE745 /* CalloutMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E087119BFED20007AE745 /* CalloutMapAnnotation.swift */; };
 		EC8C848419BCD0F400578346 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848319BCD0F400578346 /* stations.json */; };
 		EC8C848619BD8F7400578346 /* suggestion.json in Resources */ = {isa = PBXBuildFile; fileRef = EC8C848519BD8F7400578346 /* suggestion.json */; };
 		EC8C848919BDD60000578346 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */; };
@@ -123,6 +124,7 @@
 		EC4B28B919BACC6D003A995F /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbaidumapapi.a; path = "PetrolMap/Libs/BaiduMap/Release-iphonesimulator/libbaidumapapi.a"; sourceTree = "<group>"; };
 		EC4B28BB19BACDD8003A995F /* MapManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManagerDelegate.h; sourceTree = "<group>"; };
 		EC4B28BC19BACDD8003A995F /* MapManagerDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapManagerDelegate.mm; sourceTree = "<group>"; };
+		EC6E087119BFED20007AE745 /* CalloutMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutMapAnnotation.swift; sourceTree = "<group>"; };
 		EC8C848319BCD0F400578346 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		EC8C848519BD8F7400578346 /* suggestion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suggestion.json; sourceTree = "<group>"; };
 		EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPointAnnotation.swift; path = CustomCalloutView/CustomPointAnnotation.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				EC8C848819BDD60000578346 /* CustomPointAnnotation.swift */,
+				EC6E087119BFED20007AE745 /* CalloutMapAnnotation.swift */,
 			);
 			name = CustomCalloutView;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				EC4B28BD19BACDD8003A995F /* MapManagerDelegate.mm in Sources */,
 				EC8C848919BDD60000578346 /* CustomPointAnnotation.swift in Sources */,
+				EC6E087219BFED20007AE745 /* CalloutMapAnnotation.swift in Sources */,
 				ECF907F619BC53E5003BA9E2 /* XZDataManager.swift in Sources */,
 				EC174FE319BA1ED00011469C /* AppDelegate.swift in Sources */,
 				EC8C848E19BDE87B00578346 /* StationData.swift in Sources */,
